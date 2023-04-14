@@ -7,21 +7,38 @@
 	--index: calc(1vw + 1vh);
 	--text: #e7e7e0;
 	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
 }
 @font-face {
 	font-family: raleway_f;
 	src: url(../fonts/raleway-regular.woff2);
 }
+@font-face{
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2)
+}
+
 @font-face {
 	font-family: raleway_f;
 	src: url(../fonts/raleway-black.woff2);
 	font-weight: 900;
 }
+@font-face{
+	font-family: outfit-c;
+	src: url(../fonts/raleway-regular.woff2)
+}
+h1, h2, h3, h4, h5{
+	font-family: outfit-c;
+}
 body {
 	background-color: #010101;
 	font-family: raleway_f, sans-serif;
 	line-height: 1.55;
+	color: #fafafa;
+	font-family: raleway-c;
 }
+
 .main-header {
 	position: relative;
 }
@@ -144,4 +161,31 @@ body {
 	width: 0%;
 	transition: width 0.2s ease-in-out;
 	z-index: 120;
+}
+.hero{
+	width: calc(var(--index) * 30);
+	overflow: hidden;
+	border-radius: 25px;
+	left: 50vw;
+	position: relative;
+}
+.container{
+	padding: 0 10vw;
+}
+.main-title{
+	font-size: calc(var(--index) * 8);
+	position: absolute;
+	width: min-content;
+	bottom: -100vh;
+	line-height: .9;
+}
+.hero-section{
+	border-radius: 25px;
+	border: 10px #4CAF50;
+}
+
+@media (max-width: 600px){
+	.main-title{
+		bottom: -60vh;
+	}
 }

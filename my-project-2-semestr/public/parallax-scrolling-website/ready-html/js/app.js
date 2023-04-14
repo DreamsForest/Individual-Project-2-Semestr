@@ -4,8 +4,20 @@ window.addEventListener('scroll', e => {
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 ScrollSmoother.create({
 	wrapper: '.wrapper',
-	content: '.content'
+	content: '.content',
+	smooth: 1.5,
+	effects: true,
 })
+
+/*gsap.fromTo('.hero-section', {opacity: 1}, {
+	opacity: 0,
+	scrollTrigger: {
+		trigger: '.hero.setion',
+		start: 'centre',
+		end: '900',
+		scrub: true
+	}
+})*/
 
 function updateProgressBar() {
 	const windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -18,4 +30,10 @@ function updateProgressBar() {
 	progressBar.style.width = `${percent}%`;
   }
   
-  window.addEventListener('scroll', updateProgressBar);
+window.addEventListener('scroll', updateProgressBar);
+
+function positionABsolute(){
+	const element = document.querySelector('.hero');
+	element.style.position = "absolute";
+}
+setTimeout(positionABsolute, 1000);
