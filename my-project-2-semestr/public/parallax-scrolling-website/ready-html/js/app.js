@@ -102,3 +102,9 @@ setTimeout(positionABsolute, 1000);
 
 	const slider = new SliderClip(document.querySelector('.slider'));
 }
+
+
+function Otpavit(){
+	let a = "сообщение отправлено";
+	alert(a);
+}
